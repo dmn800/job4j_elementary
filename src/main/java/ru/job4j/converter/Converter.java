@@ -16,7 +16,7 @@ public class Converter {
         boolean passed = expected == out;
         System.out.println(in + " rubles are " + out + " euro. Test result: " + passed);
         in = 180;
-        expected = 2;
+        expected = 3;
         out = Converter.rubleToDollar(in);
         passed = expected == out;
         System.out.println(in + " rubles are " + out + " dollars. Test result: " + passed);
