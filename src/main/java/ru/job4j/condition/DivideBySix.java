@@ -10,7 +10,7 @@ public class DivideBySix {
         } else if (number % 3 != 0 && number % 2 == 0) {
             rsl = "Number no divide by 3 and even.";
         } else {
-            rsl = "Исходное число не делится на 3 и не является четным.";
+            rsl = "Number no divide by 3 and not even.";
         }
         return rsl;
     }
