@@ -15,8 +15,8 @@ class MultipleSwitchWeekTest {
 
     @Test
     void whenDayZero() {
-        String in = "Zero";
-        int expected = 0;
+        String in = "Other";
+        int expected = -1;
         int out = MultipleSwitchWeek.numberOfDay(in);
         assertThat(out).isEqualTo(expected);
     }
