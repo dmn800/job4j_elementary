@@ -1,22 +1,30 @@
 package ru.job4j.calculator;
 
 public class Fit {
-    public static double manWeight(short height) {
-        double rsl = (height - 100) * 1.15;
-        return rsl;
+    public enum Gender {
+        MAN,
+        WOMAN
     }
 
-    public static double womanWeight(short height) {
-        double rsl = (height - 110) * 1.15;
-        return rsl;
+    public static double calculateWeight(short height, Gender gender) {
+        if (height <= 0) {
+            throw new IllegalArgumentException("Height must be greater than 0");
+        }
+
+        return switch (gender) {
+            case MAN -> (height - 100) * 1.15;
+            case WOMAN -> (height - 110) * 1.15;
+        };
     }
 
     public static void main(String[] args) {
-        short height = 187;
-        double man = Fit.manWeight(height);
-        System.out.println("Man 187 is " + man);
-        double woman = Fit.womanWeight(height);
-        System.out.println("Woman 187 is " + woman);
-    }
+        short heightMan = 187;
+        short heightWoman = 170;
 
+        double manWeight = calculateWeight(heightMan, Gender.MAN);
+        System.out.println("Man 187 is " + manWeight);
+
+        double womanWeight = calculateWeight(heightWoman, Gender.WOMAN);
+        System.out.println("Woman 170 is " + womanWeight);
+    }
 }
