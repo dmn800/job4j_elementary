@@ -10,10 +10,10 @@ public class Calculator {
         int sum = one + two;
         int division = six / two;
         int difference = five - two;
-        int multiplcation = four * two;
+        int multiplication = four * two;
         System.out.println(sum);
         System.out.println(division);
         System.out.println(difference);
-        System.out.println(multiplcation);
+        System.out.println(multiplication);
     }
 }
